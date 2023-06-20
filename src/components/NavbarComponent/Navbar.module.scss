@@ -1,0 +1,60 @@
+.navbar_container{
+    background-color: #a598ee;
+    .navbar_header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid #848598;
+        .user_info{
+            display: flex;
+            gap: 0.5rem;
+            p{
+                margin: auto;
+            }
+            img{
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+            }
+        }
+        .sign_out{
+            margin-top: 8px;
+        }
+    }
+    .navbar_body{
+        .searchBox{
+            width: fit-content;
+            margin: 2rem;
+            input{
+                background: #fff;
+                height: 30px;
+                border: none;
+                
+            }
+
+            svg{
+                border: none;
+                height: 30px;
+                max-width: 40px;
+                width: 45px;
+                padding: 8px;
+                margin-top: -6px;
+                background-color: #63c76a;
+                color: white;
+                cursor: pointer;
+            }
+        }
+        .dropdown{
+            display: flex;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            margin-left: 0.5rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            p{
+                margin-top: -4.7px;
+            }
+    
+        }
+    }
+}
