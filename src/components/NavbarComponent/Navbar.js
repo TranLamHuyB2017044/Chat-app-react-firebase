@@ -11,7 +11,7 @@ import Cookies from "universal-cookie";
 const cookie = new Cookies();
 
 function Navbar(props) {
-  const [room, setRoom] = useState('')
+  const [room, setRoom] = useState()
   const roomInputRef = useRef(null);
   const user = useContext(UserContext);
   const [listRoom, setListRoom] = useState(false);
@@ -26,6 +26,7 @@ function Navbar(props) {
     if (e.key ==='Enter') {
       setRoom(roomInputRef.current.value)
       setGetRoom(room)
+      roomInputRef.current.value = ''
     }
   }
   return (
@@ -47,6 +48,7 @@ function Navbar(props) {
             placeholder="Search room"
             ref={roomInputRef}
             onKeyDown={handleFindRoom}
+            onChange={() => setRoom(roomInputRef.current.value)}
           />
           <BsSearch onClick={handleFindRoom}/>
         </div>

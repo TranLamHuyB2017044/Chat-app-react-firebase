@@ -54,6 +54,7 @@ function Messages(props) {
       setMessage(messages);
     });
     return () => unsubcribe;
+
   }, [messageRef, room]);
   useEffect(() => {
     // scroll to bottom after message changed

@@ -5,7 +5,7 @@ import Navbar from '../NavbarComponent/Navbar';
 import styles from './Chat.module.scss'
 function ChatRoom(props) {
   const { setIsAuth } = props;
-  const [getRoom, setGetRoom] = useState('')
+  const [getRoom, setGetRoom] = useState(null)
   return ( 
     <div className={styles.Room_container}>
         <Navbar setGetRoom ={setGetRoom}  setIsAuth = {setIsAuth}/>
